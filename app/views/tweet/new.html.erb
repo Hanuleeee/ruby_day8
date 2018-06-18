@@ -1,0 +1,4 @@
+<%= form_tag('/tweet/create') do %>  <!-- default가 post -->
+    <%= text_area_tag :post, nil, class: "form-control" %>
+    <%= submit_tag "게시하기", class: "btn btn-outline-primary" %>
+<% end %>

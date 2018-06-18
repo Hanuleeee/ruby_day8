@@ -1,0 +1,18 @@
+<div class="text-center">
+    <a class="btn btn-outline-primary" href="/tweet/new">새 게시글 작성</a>
+</div><br/>
+
+<div class="list-group">
+    <% ids= [] %>
+    <% @board.each do |board|
+        ids << board.id.to_i
+        end %>
+    <% max = ids.max %>
+    <% @board.reverse.each do |board| %>
+    <% if board.id.to_i == max %>
+        <%= link_to truncate(board.post, length: 10), "/tweet/#{board.id}", class: "list-group-item list-group-item-action active" %>
+      <%else%>
+        <%= link_to truncate(board.post, length: 10), "/tweet/#{board.id}", class: "list-group-item list-group-item-action" %>
+    <%end%>
+    <%end%>
+</div>

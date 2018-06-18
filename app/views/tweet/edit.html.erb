@@ -1,0 +1,4 @@
+<%= form_tag("/tweet/#{@board.id}/update") do %>
+    <%= text_area_tag :post, @board.post, class: "form-control" %>
+    <%= submit_tag "수정하기", class: "btn btn-outline-success" %>
+<% end %>

@@ -1,0 +1,14 @@
+<div class="text-center">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page"><%= @board.post %>
+            <small>   (<%= @board.ip_address %>)</small> </li>
+        </ol>
+    </nav>
+    <a class="btn btn-outline-secondary" href="/tweet">목록</a>
+    <a class="btn btn-outline-success" href="/tweet/<%= @board.id %>/edit">수정</a>
+    <a data-confirm= "이 글을 삭제하시겠습니까?" class="btn btn-outline-danger" href="/tweet/<%= @board.id %>/destroy">삭제</a>
+</div>
+
+
+
